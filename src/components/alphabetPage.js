@@ -48,7 +48,7 @@ const lower = lowerArray[0]
               style={[
                 styles.letterButton
                 ]} 
-                onPress={() => alert(`This ia a lower case... ${lower[0]}`)}>
+                onPress={() => alert(`This is a lower case... ${lower[0]}`)}>
                 <Text style={styles.letterBox}>{lower}</Text>
             </TouchableOpacity>
           </View>
