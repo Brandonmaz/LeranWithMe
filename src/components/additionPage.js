@@ -3,6 +3,7 @@ import {
   Text,
   View,
   TouchableOpacity,
+  Image
 } from "react-native";
 import styles from "../styles/numbersStyles";
 
@@ -48,16 +49,18 @@ const numbers = numberArray
             : numbers <= 100 ? <Text>10 + {numbers - 90}</Text> 
             : <Text>Great Job</Text>}</Text>
           </View>
-          <View>
+          <View style={styles.equalsContainer}>
             <TouchableOpacity 
               onPress={answer}
-              // onPress={numbers == 100 ? alert('Next up is Subtraction') : answer}
               style={styles.button}>
-                <Text style={styles.equalsText}>{numbers == 101 ? <Text style={{color: 'black'}}>!!</Text> : <Text>=</Text>}</Text>
+                <Text style={styles.equalsText}>{numbers == 101 ? <Text style={{color: 'black'}} onPress={() => alert('Next Up is Subtraction')}>!!</Text> : <Text>=</Text>}</Text>
             </TouchableOpacity>
           </View>
           <View style={styles.answerBox}>
             <Text style={styles.answer}>{numbers == 101 ? <Text></Text> : value}</Text>
+            <View>
+              <Image></Image>
+            </View>
           </View>
         </View>
     </View>

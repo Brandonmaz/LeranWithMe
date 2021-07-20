@@ -50,8 +50,8 @@ const numbers = numberArray
           </View>
           <View>
             <TouchableOpacity 
-              onPress={answer}
-              // onPress={numbers == 100 ? alert('Next up is Subtraction') : answer}
+              // onPress={answer}
+              onPress={numbers <= 100 ? alert('Next up is Subtraction') : answer}
               style={styles.button}>
                 <Text style={styles.equalsText}>{numbers == 101 ? <Text style={{color: 'black'}}>!!</Text> : <Text>=</Text>}</Text>
             </TouchableOpacity>

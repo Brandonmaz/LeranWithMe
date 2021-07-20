@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import styles from "../styles/numbersStyles";
+import Emoji from 'react-native-emoji';
 
 const disableYellowBox = true;
 
@@ -22,10 +23,10 @@ const numbers = numberArray
             <TouchableOpacity
             title='upperCase' 
             style={[
-                styles.button
+                styles.button1
                 ]} 
-                onPress={() => alert(`Number... ${numbers}`)}>
-                <Text style={styles.numberBox}>{numbers}</Text>
+                onPress={() => {numbers <= 100 ? alert(`Number... ${numbers}`) : alert(`Good Job`)}}>
+                <Text style={styles.numberBox}>{numbers == 101 ? <Emoji name="smiley">Next</Emoji> : numbers}</Text>
             </TouchableOpacity>
             </View>
         </View>
