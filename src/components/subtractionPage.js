@@ -33,7 +33,7 @@ const numbers = numberArray
 
   return (
     <View style={styles.mainContainer}>
-        <View style={styles.mainColorsBox}>
+        <View style={styles.mainNumbersBox}>
           <View style={styles.questionBox}>
             <Text style={styles.numbersBox}>{
             numbers <= 10 ? <Text>{numbers} - 1</Text> 
@@ -48,10 +48,10 @@ const numbers = numberArray
             : numbers <= 100 ? <Text>{numbers - 81} - 10</Text> 
             : <Text>Great Job</Text>}</Text>
           </View>
-          <View>
+          <View style={styles.equalsContainer}>
             <TouchableOpacity 
-              // onPress={answer}
-              onPress={numbers <= 100 ? alert('Next up is Subtraction') : answer}
+              onPress={answer}
+              // onPress={numbers <= 100 ? alert('Next up is Subtraction') : answer}
               style={styles.button}>
                 <Text style={styles.equalsText}>{numbers == 101 ? <Text style={{color: 'black'}}>!!</Text> : <Text>=</Text>}</Text>
             </TouchableOpacity>

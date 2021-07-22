@@ -9,6 +9,8 @@ import Emoji from 'react-native-emoji';
 
 const disableYellowBox = true;
 
+
+
 const Number = (props) => {
   const [number, setNumber] = useState(props.number)
   let numberArray = number.number;
@@ -18,8 +20,7 @@ const numbers = numberArray
 
   return (
     <View style={styles.mainContainer1}>
-        <View style={styles.mainNumbersBox}>
-        <View style={styles.numberContainer}>
+
             <TouchableOpacity
             title='upperCase' 
             style={[
@@ -28,8 +29,6 @@ const numbers = numberArray
                 onPress={() => {numbers <= 100 ? alert(`Number... ${numbers}`) : alert(`Good Job`)}}>
                 <Text style={styles.numberBox}>{numbers == 101 ? <Emoji name="smiley">Next</Emoji> : numbers}</Text>
             </TouchableOpacity>
-            </View>
-        </View>
     </View>
     )
 }

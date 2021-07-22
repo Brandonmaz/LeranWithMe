@@ -11,8 +11,9 @@ const image = require("../images/backGround2.jpeg");
 const Home = () => {
     return (
         <View>
-            <FlatList 
+            <FlatList
                 data={numbers}
+                // style={{borderWidth: 5, borderColor: 'red'}}
                 renderItem={({item}) => <Number number={item}/>} 
                 pagingEnabled={true}
                 horizontal={true}

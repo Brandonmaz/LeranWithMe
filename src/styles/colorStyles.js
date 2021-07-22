@@ -5,10 +5,12 @@ import { StyleSheet, Dimensions} from 'react-native'
 const styles = StyleSheet.create({
 colorsContainer: {
     flex: 1,
-    width: Dimensions.get('window').width - 96,
-    height: Dimensions.get('window').height - 95,
-    borderWidth: 10,
-    borderColor: 'black',
+    // width: '100%',
+    // width: Dimensions.get('window').width,
+    height: Dimensions.get('window').height,
+    width: 670,
+    // borderWidth: 10,
+    // borderColor: 'black',
 },
 textBox: {
     fontWeight: "bold",

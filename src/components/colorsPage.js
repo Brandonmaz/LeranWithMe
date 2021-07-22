@@ -27,7 +27,7 @@ const Color = (props) => {
   }
 }
 // 0.5 will randomize the colors with Math.random // slice takes 6 random items out of the array 
-  const random = array2.sort(() => 0.5 - Math.random()).slice(0, 6);
+  const random = array2.sort(() => 0.5 - Math.random()).slice(0, 14);
 
   const randomArray = []
   const mainColor = array[0]
@@ -51,7 +51,7 @@ const Color = (props) => {
                 styles.colorButton,
                 {backgroundColor: random[0]},
               ]}
-              onPress={() => alert( random[0] == mainColor ? `Correct! Lets spell it together... ${mainColor}` : 'try again')}
+              onPress={() => alert( random[0] == mainColor ? `Correct! Lets spell it together... ${mainColor}` : 'try another color')}
             >
             </TouchableOpacity>
             <TouchableOpacity
@@ -60,7 +60,7 @@ const Color = (props) => {
                 styles.colorButton,
                 {backgroundColor: random[1] },
               ]}
-              onPress={() => alert(random[1] == mainColor ? `Correct! Lets spell it together... ${mainColor}` : 'try again')}
+              onPress={() => alert(random[1] == mainColor ? `Correct! Lets spell it together... ${mainColor}` : 'try another color')}
             >
             </TouchableOpacity>
             <TouchableOpacity
@@ -69,7 +69,7 @@ const Color = (props) => {
                 styles.colorButton,
                 {backgroundColor: random[2]},
               ]}
-              onPress={() => alert(random[2] == mainColor ? `Correct! Lets spell it together... ${mainColor}` : 'try again')}
+              onPress={() => alert(random[2] == mainColor ? `Correct! Lets spell it together... ${mainColor}` : 'try another color')}
             >
             </TouchableOpacity>
           </View>
@@ -80,7 +80,7 @@ const Color = (props) => {
                 styles.colorButton,
                 {backgroundColor: random[3] },
               ]}
-              onPress={() => alert(random[3] == mainColor ? `Correct! Lets spell it together... ${mainColor}` : 'try again')}
+              onPress={() => alert(random[3] == mainColor ? `Correct! Lets spell it together... ${mainColor}` : 'try another color')}
             >
             </TouchableOpacity>
           <TouchableOpacity
@@ -89,7 +89,7 @@ const Color = (props) => {
               styles.colorButton,
               {backgroundColor: random[4]},
             ]}
-            onPress={() => alert(random[4] == mainColor ? `Correct! Lets spell it together... ${mainColor}` : 'try again')}
+            onPress={() => alert(random[4] == mainColor ? `Correct! Lets spell it together... ${mainColor}` : 'try another color')}
           >
           </TouchableOpacity>
           <TouchableOpacity
@@ -98,7 +98,7 @@ const Color = (props) => {
               styles.colorButton,
               {backgroundColor: random[0] == mainColor ? random[5] : random[1] == mainColor ? random[5] : random[2] == mainColor ? random[5] : random[3] == mainColor ? random[5] : random[4] == mainColor ? random[5] : mainColor},
             ]}
-            onPress={() => alert(random[5] || random[6] == mainColor ? `Correct! Lets spell it together... ${mainColor}` : 'try again')}
+            onPress={() => alert(random[0] == mainColor || random[1] == mainColor || random[2] == mainColor || random[3] == mainColor || random[4] == mainColor ? 'try another color' : random[6] || random[7] || random[8] || random[9] || random[10] || random[11] || random[12] || random[13] == mainColor ? `Correct! Lets spell it together... ${mainColor}` : 'Not me')}
           >
           </TouchableOpacity>
           </View>

@@ -25,15 +25,6 @@ const lower = lowerArray[0]
 
   return (
     <View style={styles.mainContainer}>
-      {/* <View
-          style={[
-            styles.lettersBox,
-          ]}
-        > 
-          <Text style={[styles.textBox, {color: 'red'}]}>{upper}</Text>
-          <Text style={[styles.textBox, {color: 'red'}]}>{lower}</Text>
-        </View> */}
-        <View style={styles.mainColorsBox}>
           <View style={styles.letterContainer1}>
             <TouchableOpacity
               title='upperCase' 
@@ -52,17 +43,6 @@ const lower = lowerArray[0]
                 <Text style={styles.letterBox}>{lower}</Text>
             </TouchableOpacity>
           </View>
-          {/* <View style={styles.letterContainer2}>
-            <TouchableOpacity
-              title='upperCase' 
-              style={[
-                styles.letterButton
-                ]} 
-                onPress={() => alert(`The Letter is... ${lower[0]}`)}>
-                <Text style={styles.letterBox}>{lower}</Text>
-            </TouchableOpacity>
-          </View> */}
-        </View>
     </View>
     )
 }

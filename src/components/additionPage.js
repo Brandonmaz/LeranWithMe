@@ -34,7 +34,7 @@ const numbers = numberArray
 
   return (
     <View style={styles.mainContainer}>
-        <View style={styles.mainColorsBox}>
+        <View style={styles.mainNumbersBox}>
           <View style={styles.questionBox}>
             <Text style={styles.numbersBox}>{
             numbers <= 10 ? <Text>1 + {numbers}</Text> 
