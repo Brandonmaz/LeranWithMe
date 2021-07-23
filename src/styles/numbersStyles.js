@@ -10,13 +10,34 @@ mainContainer: {
     // borderColor: 'black',
 },
 mainContainer1: {
-    flex: 1,
-    width:  '100%',
-    height: '100%',
-    justifyContent: 'space-evenly',
-    marginHorizontal: 23.5,
-    // borderWidth: 1,
-    // borderColor: 'green',
+    // flex: 1,
+    width: Dimensions.get('screen').width - 96,
+    height: Dimensions.get('screen').height,
+    justifyContent: 'center',
+    alignItems: 'center',
+    // marginHorizontal: 100,
+    flexDirection: 'row',
+    borderWidth: 5,
+    borderColor: 'green',
+},
+numberBox: {
+    fontWeight: "bold",
+    textAlign: 'center',
+    fontSize: 100,
+},
+button1: {
+    borderWidth: 2,
+    borderColor: "black",
+    // alignItems: "center",
+    marginHorizontal: 32,
+    backgroundColor: "rgb(225,225,225)",
+    paddingHorizontal: 20,
+    borderRadius: 10,
+    minWidth: 175,
+    shadowColor: 'black',
+    shadowOffset: { width: 7, height: 5 },
+    shadowRadius: 5,
+    shadowOpacity: 0.4,
 },
 mainNumbersBox: {
     // borderWidth: 5,
@@ -36,11 +57,7 @@ numberContainer: {
     // alignItems: 'center',
     
 },
-numberBox: {
-    fontWeight: "bold",
-    textAlign: 'center',
-    fontSize: 100,
-},
+
 numbersBox: {
     // borderWidth: 2,
     // borderColor: 'yellow',
@@ -83,20 +100,7 @@ button: {
     shadowRadius: 5,
     shadowOpacity: 0.4,
 },
-button1: {
-    borderWidth: 2,
-    borderColor: "black",
-    // alignItems: "center",
-    // marginHorizontal: 32,
-    backgroundColor: "rgb(225,225,225)",
-    // paddingHorizontal: 20,
-    borderRadius: 10,
-    minWidth: 175,
-    shadowColor: 'black',
-    shadowOffset: { width: 7, height: 5 },
-    shadowRadius: 5,
-    shadowOpacity: 0.4,
-},
+
 });
 
 export default styles;

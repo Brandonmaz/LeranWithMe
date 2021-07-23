@@ -6,9 +6,9 @@ const styles = StyleSheet.create({
 colorsContainer: {
     flex: 1,
     // width: '100%',
-    // width: Dimensions.get('window').width,
+    width: Dimensions.get('window').width,
     height: Dimensions.get('window').height,
-    width: 670,
+    // width: 670,
     // borderWidth: 10,
     // borderColor: 'black',
 },
