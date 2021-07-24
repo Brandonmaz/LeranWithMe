@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { StyleSheet,FlatList, View, Dimensions, Text, Pressable, TouchableOpacity, ImageBackground, SafeAreaView } from 'react-native';
 import Number from '../components/additionPage'
-import numbers from '../../data/numbers'
+import numbers from '../../data/number'
 
 
 const disableYellowBox = true;

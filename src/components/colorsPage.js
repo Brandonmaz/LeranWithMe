@@ -7,7 +7,7 @@ import {
   Button,
   TouchableOpacity,
 } from "react-native";
-import items from "../screens/colorPicker";
+import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import styles from "../styles/colorStyles";
 
 
@@ -44,7 +44,9 @@ const Color = (props) => {
           <Text style={[styles.textBox, {color: mainColor}]}>{mainColor}</Text>
       </View>
       <View style={styles.mainColorsBox}>
+        <FontAwesome  style={styles.arrowContainer} name={'hand-o-left'} size={60} color={mainColor == 'red' ? 'rgba(255, 255, 255, 0)' : 'pink'}/>
           <View style={styles.colorContainer1}>
+            
             <TouchableOpacity
               title="random1"
               style={[
@@ -102,6 +104,7 @@ const Color = (props) => {
           >
           </TouchableOpacity>
           </View>
+          <FontAwesome  style={styles.arrowContainer} name={'hand-o-right'} size={60} color={mainColor == 'turquoise' ? 'rgba(255, 255, 255, 0)' : 'pink'}/>
         </View>
       </View>
   );

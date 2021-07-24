@@ -5,10 +5,9 @@ import { StyleSheet, Dimensions} from 'react-native'
 const styles = StyleSheet.create({
 mainContainer: {
     flex: 1,
-    width: '100%',
+    width: Dimensions.get('screen').width - 96,
     height: '100%',
     justifyContent: 'space-evenly',
-    marginHorizontal: 95,
     // borderWidth: 10,
     // borderColor: 'black',
 },

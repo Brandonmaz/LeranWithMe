@@ -5,7 +5,7 @@ import {
   TouchableOpacity,
   Image
 } from "react-native";
-import styles from "../styles/numbersStyles";
+import styles from "../styles/addSubStyles";
 
 const disableYellowBox = true;
 
