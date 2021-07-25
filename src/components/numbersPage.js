@@ -3,15 +3,15 @@ import {
   Text,
   View,
   TouchableOpacity,
-  Dimensions
+  Image,
 } from "react-native";
-import EvilIcons from 'react-native-vector-icons/EvilIcons'
-import FontAwesome from 'react-native-vector-icons/FontAwesome'
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import styles from "../styles/numbersStyles";
-import Emoji from 'react-native-emoji';
 
 const disableYellowBox = true;
-
+const backArrow = require("../images/backArrow.png")
+const forwardArrow = require('../images/forwardArrow.png')
+const homeButton = require("../images/homeButton.png")
 
 
 const Number = (props) => {
@@ -30,7 +30,6 @@ const numbers = numberArray
   return (
     <View style={styles.mainContainer}>
       <View style={styles.numbersContainer}>
-        <FontAwesome  style={styles.arrowContainer} name={'hand-o-left'} size={60} color={numbers[0] == 1 ? 'rgba(255, 255, 255, 0)' : 'pink'}/>
       <TouchableOpacity
       title='upperCase' 
       style={[
@@ -55,8 +54,40 @@ const numbers = numberArray
           onPress={() => {numbers[2] <= 100 ? alert(`Number... ${numbers[2]}`) : alert(`Good Job`)}}>
           <Text style={styles.numberBox}>{numbers[2] == 101 ? <Emoji name="smiley">Next</Emoji> : numbers[2]}</Text>
       </TouchableOpacity>
-      <FontAwesome  style={styles.arrowContainer} name={'hand-o-right'} size={60} color={numbers[2] == 100 ? 'rgba(255, 255, 255, 0)' : 'pink'}/>
       </View>
+      <View style={styles.navBar}>
+          <TouchableOpacity
+            title="backward"
+            onPress={() => alert("go back a page")}
+          >
+            <Image source={backArrow} style={numbers[0] == 1 ? {display: 'none'} : styles.arrow}></Image>
+          </TouchableOpacity>
+          <TouchableOpacity
+            title="home"
+            onPress={() => alert("go to home page")}
+          >
+            {/* <Image source={homeButton} style={styles.arrow}></Image> */}
+            <Icon  
+              style={
+                styles.arrow, 
+                {
+                  // shadowColor: 'black',
+                  // shadowOpacity: 1,
+                  // shadowRadius: 1,
+                  // shadowOffset: {
+                  //     width: 2,
+                  //     height: 1,     
+                  // },
+                }} 
+              name={'home-circle-outline'} size={70} color={'white'}/>
+          </TouchableOpacity>
+          <TouchableOpacity
+            title="forward"
+            onPress={() => alert("next page")}
+          >
+            <Image source={forwardArrow} style={numbers[2] == 100 ? {display: 'none'} : styles.arrow}></Image>
+          </TouchableOpacity>
+        </View>
     </View>
     )
 }

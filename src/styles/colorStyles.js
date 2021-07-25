@@ -5,7 +5,7 @@ import { StyleSheet, Dimensions} from 'react-native'
 const styles = StyleSheet.create({
 colorsContainer: {
     width: Dimensions.get('window').width - 96,
-    height: Dimensions.get('window').height - 55,
+    height: Dimensions.get('window').height - 50,
     // borderWidth: 2,
     // borderColor: 'green',
 },

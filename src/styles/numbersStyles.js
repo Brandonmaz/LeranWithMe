@@ -3,22 +3,21 @@ import { StyleSheet, Dimensions} from 'react-native'
 
 const styles = StyleSheet.create({
 mainContainer: {
-    // flex: 1,
-    width: Dimensions.get('screen').width - 96,
-    height: Dimensions.get('screen').height,
+    width: Dimensions.get('window').width - 96,
+    height: Dimensions.get('window').height - 50,
     // borderWidth: 5,
     // borderColor: 'green',
 },
 numbersContainer: {
     flex: 1,
+    // borderWidth: 2,
+    // borderColor: 'blue',
     width: '80%',
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
-    // marginHorizontal: 100,
+    marginTop: 50,
     flexDirection: 'row',
-    // borderWidth: 2,
-    // borderColor: 'blue',
 },
 arrowContainer: {
     // borderWidth: 2,
@@ -49,6 +48,19 @@ button1: {
     shadowOffset: { width: 7, height: 5 },
     shadowRadius: 5,
     shadowOpacity: 0.4,
+},
+navBar: {
+    // borderWidth: 2,
+    // borderColor: "black",
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+},
+arrow: {
+    // borderWidth: 2,
+    // borderColor: "black",
+    width: 50,
+    height: 50,
 },
 });
 

@@ -1,14 +1,11 @@
 import React, { useState } from "react";
 import {
-  SafeAreaView,
-  StyleSheet,
   Text,
   View,
-  Button,
   Image,
   TouchableOpacity,
 } from "react-native";
-import FontAwesome from 'react-native-vector-icons/FontAwesome'
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import styles from "../styles/colorStyles";
 
 
@@ -113,19 +110,32 @@ const Color = (props) => {
             title="backward"
             onPress={() => alert("go back a page")}
           >
-            <Image source={backArrow} style={styles.arrow}></Image>
+            <Image source={backArrow} style={mainColor == 'red' ? {display: 'none'} : styles.arrow}></Image>
           </TouchableOpacity>
           <TouchableOpacity
             title="home"
             onPress={() => alert("go to home page")}
           >
-            <Image source={homeButton} style={styles.arrow}></Image>
+            {/* <Image source={homeButton} style={styles.arrow}></Image> */}
+            <Icon  
+              style={
+                styles.arrow, 
+                {
+                  // shadowColor: 'black',
+                  // shadowOpacity: 1,
+                  // shadowRadius: 1,
+                  // shadowOffset: {
+                  //     width: 2,
+                  //     height: 1,     
+                  // },
+                }} 
+              name={'home-circle-outline'} size={70} color={'white'}/>
           </TouchableOpacity>
           <TouchableOpacity
             title="forward"
             onPress={() => alert("next page")}
           >
-            <Image source={forwardArrow} style={styles.arrow}></Image>
+            <Image source={forwardArrow} style={mainColor == 'turquoise' ? {display: 'none'} : styles.arrow}></Image>
           </TouchableOpacity>
         </View>
       </View>

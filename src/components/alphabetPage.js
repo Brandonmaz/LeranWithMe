@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import {
-  SafeAreaView,
-  StyleSheet,
   Text,
   View,
   Image,
-  Button,
   TouchableOpacity,
 } from "react-native";
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import styles from "../styles/alphabetStyles";
 
 const disableYellowBox = true;
+const backArrow = require("../images/backArrow.png")
+const forwardArrow = require('../images/forwardArrow.png')
+const homeButton = require("../images/homeButton.png")
+
 
 const Letter = (props) => {
   const [text, setLetter] = useState(props.text)
@@ -25,7 +27,7 @@ const lower = lowerArray[0]
 
   return (
     <View style={styles.mainContainer}>
-          <View style={styles.letterContainer1}>
+          <View style={styles.letterContainer}>
             <TouchableOpacity
               title='upperCase' 
               style={[
@@ -43,6 +45,39 @@ const lower = lowerArray[0]
                 <Text style={styles.letterBox}>{lower}</Text>
             </TouchableOpacity>
           </View>
+          <View style={styles.navBar}>
+          <TouchableOpacity
+            title="backward"
+            onPress={() => alert("back")}
+          >
+            <Image source={backArrow} style={upper == 'A' ? {display: 'none'} : styles.arrow}></Image>
+          </TouchableOpacity>
+          <TouchableOpacity
+            title="home"
+            onPress={() => alert("home")}
+          >
+            {/* <Image source={homeButton} style={styles.arrow}></Image> */}
+            <Icon  
+              style={
+                styles.arrow, 
+                {
+                  // shadowColor: 'black',
+                  // shadowOpacity: 1,
+                  // shadowRadius: 1,
+                  // shadowOffset: {
+                  //     width: 2,
+                  //     height: 1,     
+                  // },
+                }} 
+              name={'home-circle-outline'} size={70} color={'white'}/>
+          </TouchableOpacity>
+          <TouchableOpacity
+            title="forward"
+            onPress={() => alert("next")}
+          >
+            <Image source={forwardArrow} style={upper == 'Z' ? {display: 'none'} : styles.arrow}></Image>
+          </TouchableOpacity>
+        </View>
     </View>
     )
 }
