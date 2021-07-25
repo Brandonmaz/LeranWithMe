@@ -111,16 +111,19 @@ const Color = (props) => {
         <View style={styles.navBar}>
           <TouchableOpacity
             title="backward"
+            onPress={() => alert("go back a page")}
           >
             <Image source={backArrow} style={styles.arrow}></Image>
           </TouchableOpacity>
           <TouchableOpacity
-            title="backward"
+            title="home"
+            onPress={() => alert("go to home page")}
           >
             <Image source={homeButton} style={styles.arrow}></Image>
           </TouchableOpacity>
           <TouchableOpacity
-            title="backward"
+            title="forward"
+            onPress={() => alert("next page")}
           >
             <Image source={forwardArrow} style={styles.arrow}></Image>
           </TouchableOpacity>

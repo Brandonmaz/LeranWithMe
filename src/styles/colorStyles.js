@@ -74,13 +74,13 @@ navBar: {
     // borderColor: "black",
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-between',
 },
 arrow: {
+    // borderWidth: 2,
+    // borderColor: "black",
     width: 50,
     height: 50,
-    marginLeft: 275,
-    marginRight: 275,
 },
 });
 
