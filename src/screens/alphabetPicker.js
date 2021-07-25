@@ -6,7 +6,7 @@ import alphabet from '../../data/alphabet'
 
 const disableYellowBox = true;
 
-const image = require("../images/backGround2.jpeg");
+const image = require("../images/mainScreen.png");
 
 const Home = () => {
     return (

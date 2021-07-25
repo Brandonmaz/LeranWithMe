@@ -5,11 +5,16 @@ import {
   Text,
   View,
   Button,
+  Image,
   TouchableOpacity,
 } from "react-native";
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import styles from "../styles/colorStyles";
 
+
+const backArrow = require("../images/backArrow.png")
+const forwardArrow = require('../images/forwardArrow.png')
+const homeButton = require("../images/homeButton.png")
 
 const Color = (props) => {
   const [color, setColor] = useState(props.color)
@@ -44,9 +49,7 @@ const Color = (props) => {
           <Text style={[styles.textBox, {color: mainColor}]}>{mainColor}</Text>
       </View>
       <View style={styles.mainColorsBox}>
-        <FontAwesome  style={styles.arrowContainer} name={'hand-o-left'} size={60} color={mainColor == 'red' ? 'rgba(255, 255, 255, 0)' : 'pink'}/>
           <View style={styles.colorContainer1}>
-            
             <TouchableOpacity
               title="random1"
               style={[
@@ -104,7 +107,23 @@ const Color = (props) => {
           >
           </TouchableOpacity>
           </View>
-          <FontAwesome  style={styles.arrowContainer} name={'hand-o-right'} size={60} color={mainColor == 'turquoise' ? 'rgba(255, 255, 255, 0)' : 'pink'}/>
+        </View>
+        <View style={styles.navBar}>
+          <TouchableOpacity
+            title="backward"
+          >
+            <Image source={backArrow} style={styles.arrow}></Image>
+          </TouchableOpacity>
+          <TouchableOpacity
+            title="backward"
+          >
+            <Image source={homeButton} style={styles.arrow}></Image>
+          </TouchableOpacity>
+          <TouchableOpacity
+            title="backward"
+          >
+            <Image source={forwardArrow} style={styles.arrow}></Image>
+          </TouchableOpacity>
         </View>
       </View>
   );

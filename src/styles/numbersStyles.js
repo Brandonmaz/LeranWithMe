@@ -6,8 +6,8 @@ mainContainer: {
     // flex: 1,
     width: Dimensions.get('screen').width - 96,
     height: Dimensions.get('screen').height,
-    borderWidth: 5,
-    borderColor: 'green',
+    // borderWidth: 5,
+    // borderColor: 'green',
 },
 numbersContainer: {
     flex: 1,

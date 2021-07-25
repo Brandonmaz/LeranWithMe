@@ -10,7 +10,7 @@ import Subtraction from '../screens/subtraction'
 import styles from '../styles/styles.js'
 import HomeScreen from '../screens/homeScreen';
 
-const homeImage = require("../images/backGround3.jpeg");
+const homeImage = require("../images/mainScreen.png");
 
 const MyTheme = {
   ...DefaultTheme,
