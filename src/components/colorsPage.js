@@ -5,7 +5,7 @@ import {
   Image,
   TouchableOpacity,
 } from "react-native";
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
+// import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import styles from "../styles/colorStyles";
 
 
@@ -116,21 +116,7 @@ const Color = (props) => {
             title="home"
             onPress={() => alert("go to home page")}
           >
-            {/* <Image source={homeButton} style={styles.arrow}></Image> */}
-            <Icon  
-              style={
-                styles.arrow, 
-                {
-                  shadowColor: 'gray',
-                  shadowOpacity: 1,
-                  shadowRadius: 1,
-                  shadowOffset: {
-                      width: 2,
-                      height: 1,     
-                  },
-                  opacity: 0.8,
-                }} 
-              name={'home-circle-outline'} size={70} color={'white'}/>
+            <Image source={homeButton} style={styles.homeButton}></Image>
           </TouchableOpacity>
           <TouchableOpacity
             title="forward"

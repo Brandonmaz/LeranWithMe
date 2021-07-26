@@ -5,7 +5,7 @@ import { StyleSheet, Dimensions} from 'react-native'
 const styles = StyleSheet.create({
 colorsContainer: {
     width: Dimensions.get('window').width - 96,
-    height: Dimensions.get('window').height - 50,
+    height: Dimensions.get('window').height - 54,
     // borderWidth: 2,
     // borderColor: 'green',
 },
@@ -61,7 +61,7 @@ colorButton: {
     padding: 40,
     borderRadius: 10,
     shadowColor: 'black',
-    shadowOffset: { width: 4, height: 3 },
+    shadowOffset: { width: 1, height: 2 },
     shadowRadius: 5,
     shadowOpacity: 0.6,
 },
@@ -77,6 +77,13 @@ arrow: {
     // borderColor: "black",
     width: 50,
     height: 50,
+    opacity: 0.8,
+},
+homeButton: {
+    // borderWidth: 2,
+    // borderColor: "black",
+    width: 55,
+    height: 55,
     opacity: 0.9,
 },
 });

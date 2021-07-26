@@ -70,33 +70,19 @@ const numbers = numberArray
             title="backward"
             onPress={() => alert("back")}
           >
-            <Image source={backArrow} style={value == '?' ? {display: 'none'} : styles.arrow}></Image>
+            <Image source={backArrow} style={numbers == 1 ? {display: 'none'} : styles.arrow}></Image>
           </TouchableOpacity>
           <TouchableOpacity
             title="home"
             onPress={() => alert("home")}
           >
-            {/* <Image source={homeButton} style={styles.arrow}></Image> */}
-            <Icon  
-              style={
-                styles.arrow, 
-                {
-                  // shadowColor: 'black',
-                  // shadowOpacity: 1,
-                  // shadowRadius: 1,
-                  // shadowOffset: {
-                  //     width: 2,
-                  //     height: 1,     
-                  // },
-                  opacity: 0.8,
-                }} 
-              name={'home-circle-outline'} size={70} color={'white'}/>
+            <Image source={homeButton} style={styles.homeButton}></Image>
           </TouchableOpacity>
           <TouchableOpacity
             title="forward"
             onPress={() => alert("next")}
           >
-            <Image source={forwardArrow} style={value == '?' ? {display: 'none'} : styles.arrow}></Image>
+            <Image source={forwardArrow} style={value == '?' || numbers == 101 ? {display: 'none'} : styles.arrow}></Image>
           </TouchableOpacity>
         </View>
     </View>
