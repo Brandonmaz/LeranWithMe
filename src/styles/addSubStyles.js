@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
 mainContainer: {
     // flex: 1,
     width: Dimensions.get('window').width - 96,
-    height: Dimensions.get('window').height,
+    height: Dimensions.get('window').height - 50,
     // borderWidth: 10,
     // borderColor: 'black',
 },
@@ -23,7 +23,6 @@ numbersBox: {
     // borderColor: 'yellow',
     // width: '100%',
     fontWeight: "bold",
-    padding: 10,
     fontSize: 90,
 },
 answerBox: {
@@ -31,7 +30,6 @@ answerBox: {
     // borderColor: "brown",
     fontWeight: "bold",
     textAlign: "center",
-    padding: 10,
     marginLeft: 40,
 },
 answer: {
@@ -41,24 +39,38 @@ answer: {
 equalsContainer: {
     // borderWidth: 2,
     // borderColor: "black",
-    padding: 10,
+    padding: 15,
 },
 equalsText: {
     fontWeight: "bold",
-    fontSize: 100,
+    fontSize: 80,
 },
 button: {
     borderWidth: 2,
     borderColor: "black",
     alignItems: "center",
     marginLeft: 30,
-    backgroundColor: "silver",
+    backgroundColor: "rgba(230,230,230,0.8)",
     padding: 10,
     borderRadius: 10,
     shadowColor: 'black',
     shadowOffset: { width: 7, height: 5 },
     shadowRadius: 5,
     shadowOpacity: 0.4,
+},
+navBar: {
+    // borderWidth: 2,
+    // borderColor: "black",
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+},
+arrow: {
+    // borderWidth: 2,
+    // borderColor: "black",
+    width: 50,
+    height: 50,
+    opacity: 0.8
 },
 });
 

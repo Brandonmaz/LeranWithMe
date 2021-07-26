@@ -121,13 +121,14 @@ const Color = (props) => {
               style={
                 styles.arrow, 
                 {
-                  // shadowColor: 'black',
-                  // shadowOpacity: 1,
-                  // shadowRadius: 1,
-                  // shadowOffset: {
-                  //     width: 2,
-                  //     height: 1,     
-                  // },
+                  shadowColor: 'gray',
+                  shadowOpacity: 1,
+                  shadowRadius: 1,
+                  shadowOffset: {
+                      width: 2,
+                      height: 1,     
+                  },
+                  opacity: 0.8,
                 }} 
               name={'home-circle-outline'} size={70} color={'white'}/>
           </TouchableOpacity>

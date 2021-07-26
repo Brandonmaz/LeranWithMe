@@ -68,6 +68,7 @@ const lower = lowerArray[0]
                   //     width: 2,
                   //     height: 1,     
                   // },
+                  opacity: 0.8,
                 }} 
               name={'home-circle-outline'} size={70} color={'white'}/>
           </TouchableOpacity>

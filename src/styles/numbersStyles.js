@@ -37,10 +37,10 @@ numberBox: {
 },
 button1: {
     borderWidth: 2,
-    borderColor: "black",
     // alignItems: "center",
     marginHorizontal: 32,
-    backgroundColor: "rgb(225,225,225)",
+    borderColor: "rgba(0,0,0,0.2)",
+    backgroundColor: "rgba(225,225,225, 0.7)",
     paddingHorizontal: 20,
     borderRadius: 10,
     minWidth: 150,
@@ -61,6 +61,7 @@ arrow: {
     // borderColor: "black",
     width: 50,
     height: 50,
+    opacity: 0.8
 },
 });
 

@@ -32,8 +32,8 @@ letterContainer: {
 },
 letterButton: {
     borderWidth: 2,
-    borderColor: "black",
-    backgroundColor: "rgb(225,225,225)",
+    borderColor: "rgba(0,0,0,0.2)",
+    backgroundColor: "rgba(225,225,225, 0.7)",
     borderRadius: 10,
     minWidth: 175,
     shadowColor: 'black',
@@ -53,6 +53,7 @@ arrow: {
     // borderColor: "black",
     width: 50,
     height: 50,
+    opacity: 0.8
 },
 });
 
