@@ -5,8 +5,10 @@ import ColorsPage from "../components/colorsPage";
 
 const styles = StyleSheet.create({
 image: {
-    flex: 1,
-    resizeMode: 'cover',
+    // flex: 1,
+    // resizeMode: 'cover',
+    width: '100%',
+    height: '100%',
 },
 homeButtonImage: {
     flex: 1,
