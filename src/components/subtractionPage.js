@@ -3,10 +3,15 @@ import {
   Text,
   View,
   TouchableOpacity,
+  Image,
 } from "react-native";
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import styles from "../styles/addSubStyles";
 
 const disableYellowBox = true;
+const backArrow = require("../images/backArrow.png")
+const forwardArrow = require('../images/forwardArrow.png')
+const homeButton = require("../images/homeButton.png")
 
 const Number = (props) => {
 const [value, setValue] = useState('?');
@@ -59,6 +64,40 @@ const numbers = numberArray
           <View style={styles.answerBox}>
             <Text style={styles.answer}>{numbers == 101 ? <Text></Text> : value}</Text>
           </View>
+        </View>
+        <View style={styles.navBar}>
+          <TouchableOpacity
+            title="backward"
+            onPress={() => alert("back")}
+          >
+            <Image source={backArrow} style={value == '?' ? {display: 'none'} : styles.arrow}></Image>
+          </TouchableOpacity>
+          <TouchableOpacity
+            title="home"
+            onPress={() => alert("home")}
+          >
+            {/* <Image source={homeButton} style={styles.arrow}></Image> */}
+            <Icon  
+              style={
+                styles.arrow, 
+                {
+                  // shadowColor: 'black',
+                  // shadowOpacity: 1,
+                  // shadowRadius: 1,
+                  // shadowOffset: {
+                  //     width: 2,
+                  //     height: 1,     
+                  // },
+                  opacity: 0.8,
+                }} 
+              name={'home-circle-outline'} size={70} color={'white'}/>
+          </TouchableOpacity>
+          <TouchableOpacity
+            title="forward"
+            onPress={() => alert("next")}
+          >
+            <Image source={forwardArrow} style={value == '?' ? {display: 'none'} : styles.arrow}></Image>
+          </TouchableOpacity>
         </View>
     </View>
     )
